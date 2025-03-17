@@ -1,0 +1,264 @@
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Connect</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; /* Modern, clean feel */
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7; /* Light gray background */
+            color: #333333; /* Dark Charcoal text */
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #FAFAFA; /* Clean white navbar */
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.05); /* Subtle drop shadow */
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333333;
+            text-decoration: none;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #333333;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #AFCBFF; /* Muted Pastel Blue hover */
+            color: #333333;
+            text-decoration: underline; /* Thin underline on hover */
+        }
+
+        .sign-in-btn {
+            background-color: transparent;
+            color: #333333;
+            border: 1px solid #333333;
+            padding: 8px 15px;
+            border-radius: 4px; /* Sharper, modern look */
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .sign-in-btn:hover {
+            background-color: #7D5BA6; /* Soft Lavender hover */
+            color: #FAFAFA;
+            border-color: #7D5BA6;
+        }
+
+
+        /* Welcome Section */
+        .welcome-section {
+            background-color: #FAFAFA; /* Clean white background */
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .welcome-title {
+            font-size: 2.5em;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+
+        /* What We Offer Section */
+        .offer-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .offer-title {
+            font-size: 2em;
+            color: #333333;
+            margin-bottom: 30px;
+        }
+
+        .feature-cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Increased spacing between cards */
+            flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+        }
+
+        .feature-card {
+            background-color: #FAFAFA; /* Light background for cards */
+            border: 1px solid #eee; /* Thin border */
+            border-radius: 6px;
+            padding: 20px;
+            text-align: left;
+            width: 300px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); /* Soft shadow */
+        }
+
+        .feature-card h3 {
+            color: #7D5BA6; /* Soft Lavender for titles */
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #333333;
+            font-weight: 400; /* Lighter font weight for description */
+            margin-bottom: 15px;
+        }
+
+        .feature-button {
+            display: inline-block;
+            background-color: #AFCBFF; /* Muted Pastel Blue button */
+            color: #333333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 0.9em; /* Slightly reduced text size in buttons */
+        }
+
+        .feature-button:hover {
+            background-color: #6DC1B3; /* Soft Teal hover for CTA */
+            color: #FAFAFA;
+        }
+
+
+        /* Ready to Get Started Section */
+        .cta-section {
+            background-color: #FAFAFA; /* Light background */
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 1.8em;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #FF9A8C; /* Pastel Coral for CTA buttons */
+            color: #FAFAFA;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Ensure it's not underlined if used as a link */
+            display: inline-block; /* To apply padding and width if needed */
+        }
+
+        .cta-button:hover {
+            background-color: #6DC1B3; /* Soft Teal hover for CTA buttons */
+        }
+
+
+        /* Footer */
+        .footer {
+            background-color: #FAFAFA; /* Clean white footer */
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid #eee; /* Thin border */
+            color: #777; /* Light gray text for footer */
+            font-size: 0.8em;
+        }
+
+
+        /* Responsive adjustments (optional, but good practice) */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-item {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            .feature-cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Poppins Font -->
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">Student Connect</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Join Events</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Learn More</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
+            <li class="nav-item"><button class="sign-in-btn">Logout</button></li>
+        </ul>
+    </nav>
+
+    <header class="welcome-section">
+        <h1 class="welcome-title">Welcome to Student Connect</h1>
+    </header>
+
+    <section class="offer-section">
+        <h2 class="offer-title">What We Offer</h2>
+        <div class="feature-cards-container">
+            <div class="feature-card">
+                <h3>Connect with Students</h3>
+                <p>Build your network and meet like-minded students from your university and beyond.</p>
+                <a href="#" class="feature-button">Learn More</a>
+            </div>
+            <div class="feature-card">
+                <h3>Join Events</h3>
+                <p>Find and participate in exciting events happening around your campus.</p>
+                <a href="#" class="feature-button">Explore Events</a>
+            </div>
+            <div class="feature-card">
+                <h3>Build Your Profile</h3>
+                <p>Create a professional profile to showcase your skills and interests.</p>
+                <a href="#" class="feature-button">Create Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="cta-title">Ready to Get Started?</h2>
+        <p>Join our community today and start connecting with fellow students!</p>
+        <a href="#" class="cta-button">View Events</a>
+    </section>
+
+    <footer class="footer">
+        © 2023 Student Connect. All rights reserved. | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+    </footer>
+
+</body>
+</html>
+
+    
