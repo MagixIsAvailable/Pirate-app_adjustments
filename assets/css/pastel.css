@@ -1,0 +1,157 @@
+/*  --------------------------------------------------
+    Pastel Purple Student Friendly Theme CSS
+    -------------------------------------------------- */
+
+/* Root variables for easy color customization */
+:root {
+    --primary-pastel-purple: #E0BBE4;       /* Main pastel purple background */
+    --secondary-pastel-purple: #B284BE;     /* Slightly darker purple for accents, headers */
+    --light-pastel-purple: #F8F0FB;        /* Very light purple/off-white for backgrounds, cards */
+    --text-color-dark: #333333;             /* Dark text color for readability on light backgrounds */
+    --text-color-light: #FFFFFF;            /* Light text color for darker backgrounds (if needed) */
+    --accent-color: #AEC6CF;               /* A softer accent color, light blue-ish for highlights */
+  }
+  
+  /*  --------------------------------------------------
+      Basic Reset and Body Styles
+      -------------------------------------------------- */
+  body {
+    font-family: sans-serif; /* Or a student-friendly font like 'Nunito', 'Open Sans', 'Lato' - you can change this */
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-pastel-purple); /* Main background color */
+    color: var(--text-color-dark); /* Default text color */
+    line-height: 1.6; /* Improved readability */
+    -webkit-font-smoothing: antialiased; /* Better font rendering for webkit browsers */
+    -moz-osx-font-smoothing: grayscale; /* Better font rendering for Firefox on macOS */
+  }
+  
+  /*  --------------------------------------------------
+      Header and Navigation (adjust selectors to match your HTML)
+      -------------------------------------------------- */
+  header {
+    background-color: var(--light-pastel-purple); /* Light purple header */
+    padding: 20px 0;
+    border-bottom: 1px solid var(--secondary-pastel-purple); /* Subtle border */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center align navigation links */
+  }
+  
+  nav li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--text-color-dark);
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  nav a:hover {
+    color: var(--secondary-pastel-purple); /* Hover color */
+  }
+  
+  
+  /*  --------------------------------------------------
+      Main Content Area (adjust selectors to match your HTML, e.g., 'main', 'container', 'section')
+      -------------------------------------------------- */
+  main, .container, section { /* Add your content container selectors here */
+    padding: 20px;
+    max-width: 1200px; /* Example max width for content */
+    margin: 20px auto; /* Center content on page */
+    background-color: var(--light-pastel-purple); /* Light background for content area */
+    border-radius: 10px; /* Rounded corners for content sections */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+  }
+  
+  
+  /*  --------------------------------------------------
+      Headings (h1, h2, h3, etc.)
+      -------------------------------------------------- */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--secondary-pastel-purple); /* Purple headings */
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  h1 {
+    font-size: 2.5em; /* Larger size for main title */
+    text-align: center; /* Center align main title */
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  /*  --------------------------------------------------
+      Buttons (adjust selectors to match your HTML, e.g., button, .button, .btn)
+      -------------------------------------------------- */
+  button, .button, .btn {
+    background-color: var(--secondary-pastel-purple); /* Purple button background */
+    color: var(--text-color-light); /* Light text on buttons */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px; /* Rounded button corners */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  button:hover, .button:hover, .btn:hover {
+    background-color: var(--accent-color); /* Accent color on hover */
+  }
+  
+  /*  --------------------------------------------------
+      Links within content areas (adjust if needed)
+      -------------------------------------------------- */
+  a {
+    color: var(--secondary-pastel-purple); /* Purple links in content */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--accent-color); /* Accent color on link hover */
+    text-decoration: underline; /* Optional: underline on hover */
+  }
+  
+  
+  /*  --------------------------------------------------
+      Cards/Boxes (like "What We Offer" boxes - adjust selectors)
+      -------------------------------------------------- */
+  .card, .box { /* Add your card/box container selectors here */
+    background-color: var(--primary-pastel-purple); /* Slightly darker purple for cards */
+    color: var(--text-color-light); /* Light text on cards */
+    padding: 20px;
+    border-radius: 15px; /* More rounded corners for cards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Slightly stronger shadow for cards */
+    text-align: center;
+    margin-bottom: 20px; /* Spacing between cards */
+  }
+  
+  .card h3, .box h3 {
+    color: var(--text-color-light); /* Ensure card headings are light */
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  /*  --------------------------------------------------
+      Footer (adjust selectors to match your HTML)
+      -------------------------------------------------- */
+  footer {
+    background-color: var(--light-pastel-purple); /* Light purple footer */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid var(--secondary-pastel-purple); /* Subtle border */
+    color: var(--text-color-dark);
+  }
+  
