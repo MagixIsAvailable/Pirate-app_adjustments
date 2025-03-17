@@ -1,138 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Connect - Events</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .joined-event-item {
-      background-color: #e0f7fa; /* Light cyan color */
-      border: 1px solid #00796b; /* Dark teal border */
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-    }
-
-    .joined-event-item p {
-      margin: 0;
-      font-size: 16px;
-    }
-
-    .joined-events-section {
-      background-color: #f4f4f9;
-      padding: 20px;
-      margin-top: 30px;
-      border-radius: 8px;
-    }
-
-    .joined-events-title {
-      font-size: 20px;
-      font-weight: bold;
-      color: #00796b; /* Dark teal color */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Student Connect</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
 </head>
 <body>
-  <header class="header">
-    <h1>Student Connect</h1>
-    <nav>
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="events.html" class="nav-link">Events</a>
-      <a href="support.html" class="nav-link">Support</a>
-      <a href="profile.html" class="nav-link">Profile</a>
-    </nav>
-  </header>
-  
-  <main class="main-content">
-    <h2 class="page-title">Upcoming Events</h2>
-
-    <!-- Section for upcoming events -->
-    <section class="card bg-gradient-blue">
-      <h3>Hackathon 2025</h3>
-      <p>Date: February 10, 2025</p>
-      <button class="btn bg-yellow" onclick="redirectToLearnMore('Hackathon 2025', 'February 10, 2025', 'Join us for an exciting hackathon where teams compete to solve real-world problems.')">Learn More</button>
-      <button class="btn bg-green" onclick="joinEvent('Hackathon 2025', 'February 10, 2025')">Join Event</button>
-    </section>
-
-    <section class="card bg-gradient-purple">
-      <h3>Art Society Meetup</h3>
-      <p>Date: February 15, 2025</p>
-      <button class="btn bg-yellow" onclick="redirectToLearnMore('Art Society Meetup', 'February 15, 2025', 'Connect with fellow artists, share ideas, and collaborate on creative projects.')">Learn More</button>
-      <button class="btn bg-green" onclick="joinEvent('Art Society Meetup', 'February 15, 2025')">Join Event</button>
-    </section>
-
-    <section class="card bg-gradient-orange">
-      <h3>Music Night</h3>
-      <p>Date: March 5, 2025</p>
-      <button class="btn bg-yellow" onclick="redirectToLearnMore('Music Night', 'March 5, 2025', 'Enjoy a night of live music performances and networking.')">Learn More</button>
-      <button class="btn bg-green" onclick="joinEvent('Music Night', 'March 5, 2025')">Join Event</button>
-    </section>
-
-    <!-- Section for joined events -->
-    <section id="joined-events-section" class="joined-events-section">
-      <h3 class="joined-events-title">Your Joined Events</h3>
-      <div id="joined-events-list">
-        <!-- Joined events will be listed here -->
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    &copy; 2025 Student Connect. All rights reserved.
-  </footer>
-
-  <script>
-    function redirectToLearnMore(event, date, description) {
-        const url = `LearnMore.html?event=${encodeURIComponent(event)}&date=${encodeURIComponent(date)}&description=${encodeURIComponent(description)}`;
-        window.location.href = url;
-    }
-
-    function navigateTo(page) {
-        window.location.href = page;
-    }
-
-    function joinEvent(eventName, eventDate) {
-            // Create a URL with the event details as parameters
-            const url = `JoinEvents.html?event=${encodeURIComponent(eventName)}&date=${encodeURIComponent(eventDate)}`;
+    <div id="navigation-placeholder"></div>
+    
+    <div class="container main-content">
+        <h1>Upcoming Events</h1>
+        
+        <div class="features">
+            <div class="card">
+                <h3>Tech Workshop</h3>
+                <p>Learn the latest technologies from industry experts.</p>
+                <p><strong>Date:</strong> June 15, 2025</p>
+                <p><strong>Location:</strong> Tech Building, Room 101</p>
+                <button class="btn" onclick="joinEvent('tech-workshop', 'Tech Workshop')">Join Event</button>
+            </div>
             
-            // Redirect to the JoinEvents page with the event data in the URL
-            window.location.href = url;
-    }
-
-    function redirectToJoinEvent(eventName, eventDate) {
-        // Save event to localStorage
-        let joinedEvents = JSON.parse(localStorage.getItem("joinedEvents")) || [];
-        joinedEvents.push({ eventName, eventDate });
-        localStorage.setItem("joinedEvents", JSON.stringify(joinedEvents));
-
-        // Show alert and refresh the page to update the joined events section
-        alert(`${eventName} has been added to your joined events!`);
-        displayJoinedEvents();
-    }
-
-    // Function to display the list of joined events
-    function displayJoinedEvents() {
-      let joinedEvents = JSON.parse(localStorage.getItem("joinedEvents")) || [];
-      const joinedEventsList = document.getElementById("joined-events-list");
-
-      // Clear the list first
-      joinedEventsList.innerHTML = '';
-
-      if (joinedEvents.length > 0) {
-        joinedEvents.forEach(event => {
-          const eventDiv = document.createElement("div");
-          eventDiv.classList.add("joined-event-item");
-          eventDiv.innerHTML = `<p><strong>${event.eventName}</strong> - ${event.eventDate}</p>`;
-          joinedEventsList.appendChild(eventDiv);
+            <div class="card">
+                <h3>Career Fair</h3>
+                <p>Connect with potential employers and discover job opportunities.</p>
+                <p><strong>Date:</strong> July 5, 2025</p>
+                <p><strong>Location:</strong> Main Hall</p>
+                <button class="btn" onclick="joinEvent('career-fair', 'Career Fair')">Join Event</button>
+            </div>
+            
+            <div class="card">
+                <h3>Networking Mixer</h3>
+                <p>Meet fellow students and build your professional network.</p>
+                <p><strong>Date:</strong> July 20, 2025</p>
+                <p><strong>Location:</strong> Student Union</p>
+                <button class="btn" onclick="joinEvent('networking-mixer', 'Networking Mixer')">Join Event</button>
+            </div>
+        </div>
+        
+        <div class="auth-show" style="display: none;">
+            <h2>Your Events</h2>
+            <div id="joined-events">
+                <p>Loading your events...</p>
+            </div>
+        </div>
+        
+        <div class="auth-hide">
+            <div class="card text-center">
+                <h2>Login to Join Events</h2>
+                <p>You need to login to join our exciting events!</p>
+                <a href="login.html" class="btn">Login</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/events.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (isUserLoggedIn()) {
+                loadJoinedEvents();
+            }
         });
-      } else {
-        joinedEventsList.innerHTML = "<p>No events joined yet. Join some events!</p>";
-      }
-    }
-
-    // Call the display function when the page loads
-    window.onload = displayJoinedEvents;
-  </script>
+    </script>
 </body>
 </html>
