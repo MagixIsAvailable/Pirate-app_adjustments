@@ -1,0 +1,51 @@
+<!-- filepath: pages/join-events.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Events - Student Connect</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body>
+    <div id="navigation-placeholder"></div>
+    
+    <div class="container main-content">
+        <h1>Join Upcoming Events</h1>
+        
+        <div class="features">
+            <div class="gradient-card">
+                <h3>Tech Workshop</h3>
+                <p>Learn the latest technologies from industry experts.</p>
+                <p><strong>Date:</strong> June 15, 2025</p>
+                <p><strong>Location:</strong> Tech Building, Room 101</p>
+                <button class="btn" onclick="joinEvent('tech-workshop', 'Tech Workshop')">Join Event</button>
+            </div>
+            
+            <div class="gradient-card">
+                <h3>Career Fair</h3>
+                <p>Connect with potential employers and discover job opportunities.</p>
+                <p><strong>Date:</strong> July 5, 2025</p>
+                <p><strong>Location:</strong> Main Hall</p>
+                <button class="btn" onclick="joinEvent('career-fair', 'Career Fair')">Join Event</button>
+            </div>
+            
+            <div class="gradient-card">
+                <h3>Networking Mixer</h3>
+                <p>Meet fellow students and build your professional network.</p>
+                <p><strong>Date:</strong> July 20, 2025</p>
+                <p><strong>Location:</strong> Student Union</p>
+                <button class="btn" onclick="joinEvent('networking-mixer', 'Networking Mixer')">Join Event</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/events.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

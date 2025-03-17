@@ -24,38 +24,56 @@
   </script>
 </head>
 <body>
-  <header class="header">
-    <h1>Student Connect</h1>
-    <nav>
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="events.html" class="nav-link">Events</a>
-      <a href="support.html" class="nav-link">Support</a>
-      <a href="profile.html" class="nav-link">Profile</a>
-    </nav>
-  </header>
-
-  <main class="main-content">
-    <!-- Colorful Profile Card -->
-    <section class="card bg-gradient-blue">
-      <h2>Your Profile</h2>
-      <div class="profile-info">
-        <p><strong>Name:</strong> <span id="profileName"></span></p>
-        <p><strong>Course:</strong> <span id="profileCourse"></span></p>
-        <p><strong>University:</strong> <span id="profileUniversity"></span></p>
-      </div>
-    </section>
-
-    <!-- Add more sections for a colorful experience -->
-    <section class="card bg-gradient-purple">
-      <h2>Your Upcoming Events</h2>
-      <p>Check out the events you're attending!</p>
-      <button class="btn bg-yellow" onclick="window.location.href='events.html'">Explore Events</button>
-    </section>
+    <div id="navigation-placeholder"></div>
     
-  </main>
+    <div class="container main-content">
+        <h1>Your Profile</h1>
+        
+        <div class="card">
+            <h2>Welcome, <span class="username">User</span>!</h2>
+            
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="profile-name">Full Name</label>
+                    <input type="text" id="profile-name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="profile-email">Email</label>
+                    <input type="email" id="profile-email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="profile-major">Major/Program</label>
+                    <input type="text" id="profile-major" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="profile-year">Year of Study</label>
+                    <select id="profile-year" class="form-control">
+                        <option value="1">First Year</option>
+                        <option value="2">Second Year</option>
+                        <option value="3">Third Year</option>
+                        <option value="4">Fourth Year</option>
+                        <option value="5">Graduate</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="profile-bio">Bio</label>
+                    <textarea id="profile-bio" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Profile</button>
+            </form>
+        </div>
+        
+        <div class="card">
+            <h2>Your Joined Events</h2>
+            <div id="joined-events" class="events-list">
+                <!-- Events will be dynamically inserted here -->
+                <p class="no-events">You haven't joined any events yet.</p>
+            </div>
+        </div>
+    </div>
 
-  <footer class="footer">
-    &copy; 2025 Student Connect. All rights reserved.
-  </footer>
+    <script src="../assets/js/navigation.js" defer></script>
+    <script src="../assets/js/auth.js" defer></script>
+    <script src="../assets/js/profile.js" defer></script>
 </body>
 </html>
